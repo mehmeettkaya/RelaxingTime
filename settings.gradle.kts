@@ -1,2 +1,3 @@
 rootProject.name = "RelaxingTime"
-include ':app'
+
+include(":app")
