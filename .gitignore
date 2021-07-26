@@ -1,0 +1,20 @@
+# Created by .gitignore support plugin (hsz.mobi)
+/.idea/*
+# Do not ignore code style config
+!/.idea/codeStyles
+build
+reports
+*.iml
+local.properties
+signing.properties
+yemeksepeti.keystore
+.gradle/
+.navigation/
+*.hprof
+*.txt
+*.apk
+captures/
+*.log
+*.DS_STORE
+!distribution_groups.txt
+*.apk
