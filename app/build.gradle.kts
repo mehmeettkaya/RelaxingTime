@@ -10,15 +10,11 @@ plugins {
 android {
     defaultConfig {
         applicationId = "com.mehmetkaya.relaxingtime"
-
-        compileSdkVersion(Config.compileSdkVersion)
-        minSdkVersion(Config.minSdkVersion)
-        targetSdkVersion(Config.targetSdkVersion)
-
-        versionName = Config.versionName
-        versionCode = Config.versionCode
-
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildFeatures {
+        viewBinding = true
     }
 
     buildTypes {
@@ -26,26 +22,6 @@ android {
             isMinifyEnabled = false
             consumerProguardFile("proguard-rules.pro")
         }
-    }
-
-    buildFeatures {
-        viewBinding = true
-    }
-
-    testOptions {
-        unitTests.apply {
-            isIncludeAndroidResources = true
-            isReturnDefaultValues = true
-        }
-    }
-
-    compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
-    }
-
-    kotlinOptions {
-        jvmTarget = JavaVersion.VERSION_1_8.toString()
     }
 
     buildTypes.forEach { buildType ->
