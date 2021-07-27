@@ -1,7 +1,7 @@
-package com.mehmetkaya.relaxingtime
+package com.mehmetkaya.core
 
 import androidx.lifecycle.viewModelScope
-import com.mehmetkaya.relaxingtime.exts.throwIfNotServiceError
+import com.mehmetkaya.utils.exts.throwIfNotServiceError
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
 import timber.log.Timber

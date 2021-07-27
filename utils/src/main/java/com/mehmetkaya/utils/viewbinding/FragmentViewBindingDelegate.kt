@@ -1,4 +1,4 @@
-package com.mehmetkaya.relaxingtime.viewbinding
+package com.mehmetkaya.utils.viewbinding
 
 import android.view.View
 import androidx.fragment.app.Fragment

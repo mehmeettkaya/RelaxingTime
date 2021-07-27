@@ -1,4 +1,4 @@
-package com.mehmetkaya.relaxingtime
+package com.mehmetkaya.core
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope

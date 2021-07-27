@@ -1,4 +1,4 @@
-package com.mehmetkaya.relaxingtime.exts
+package com.mehmetkaya.utils.exts
 
 import dagger.Lazy
 import okhttp3.OkHttpClient

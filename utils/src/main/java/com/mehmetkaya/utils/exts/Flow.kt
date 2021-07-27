@@ -1,4 +1,4 @@
-package com.mehmetkaya.relaxingtime.exts
+package com.mehmetkaya.utils.exts
 
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleOwner

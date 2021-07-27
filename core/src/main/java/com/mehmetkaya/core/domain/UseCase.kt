@@ -1,4 +1,4 @@
-package com.mehmetkaya.relaxingtime.domain
+package com.mehmetkaya.core.domain
 
 interface UseCase<in Input, out Output> {
     suspend operator fun invoke(input: Input): Output

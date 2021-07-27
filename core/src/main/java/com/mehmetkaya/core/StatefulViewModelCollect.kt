@@ -1,9 +1,9 @@
-package com.mehmetkaya.relaxingtime
+package com.mehmetkaya.core
 
 import androidx.activity.ComponentActivity
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.LifecycleOwner
-import com.mehmetkaya.relaxingtime.exts.collectIn
+import com.mehmetkaya.utils.exts.collectIn
 import kotlinx.coroutines.flow.distinctUntilChanged
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.flow.mapNotNull

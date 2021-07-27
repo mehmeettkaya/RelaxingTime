@@ -10,9 +10,9 @@ import androidx.fragment.app.Fragment
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.mehmetkaya.relaxingtime.R
 import com.mehmetkaya.relaxingtime.databinding.FragmentBaseBinding
-import com.mehmetkaya.relaxingtime.exts.hide
-import com.mehmetkaya.relaxingtime.exts.show
-import com.mehmetkaya.relaxingtime.viewbinding.viewBinding
+import com.mehmetkaya.utils.exts.hide
+import com.mehmetkaya.utils.exts.show
+import com.mehmetkaya.utils.viewbinding.viewBinding
 
 abstract class BaseFragment : Fragment() {
 

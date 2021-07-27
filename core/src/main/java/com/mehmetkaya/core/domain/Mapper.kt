@@ -1,4 +1,4 @@
-package com.mehmetkaya.relaxingtime.domain
+package com.mehmetkaya.core.domain
 
 interface Mapper<in Input, out Output> {
     fun map(input: Input): Output

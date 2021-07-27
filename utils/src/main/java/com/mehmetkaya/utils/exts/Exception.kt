@@ -1,4 +1,4 @@
-package com.mehmetkaya.relaxingtime.exts
+package com.mehmetkaya.utils.exts
 
 import kotlinx.serialization.SerializationException
 

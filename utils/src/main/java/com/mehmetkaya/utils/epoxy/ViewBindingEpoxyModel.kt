@@ -1,11 +1,11 @@
-package com.mehmetkaya.relaxingtime.epoxy
+package com.mehmetkaya.utils.epoxy
 
 import android.view.View
 import android.view.ViewParent
 import androidx.viewbinding.ViewBinding
 import com.airbnb.epoxy.EpoxyHolder
 import com.airbnb.epoxy.EpoxyModelWithHolder
-import com.mehmetkaya.relaxingtime.exts.unsafeLazy
+import com.mehmetkaya.utils.exts.unsafeLazy
 import java.lang.reflect.Method
 import java.lang.reflect.ParameterizedType
 import java.util.concurrent.ConcurrentHashMap
