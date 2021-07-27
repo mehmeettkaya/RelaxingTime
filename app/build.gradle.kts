@@ -32,6 +32,9 @@ android {
 }
 
 dependencies {
+    implementation(project(":core"))
+    implementation(project(":utils"))
+
     // Kotlin
     implementation(Deps.kotlin)
     implementation(Deps.coreKtx)
@@ -65,6 +68,7 @@ dependencies {
     implementation(Deps.retrofitConverterKotlinSerialization)
 
     // Epoxy
+    implementation(Deps.gravitySnapHelper)
     implementation(Deps.epoxy)
     kapt(Deps.epoxyProcessor)
 
