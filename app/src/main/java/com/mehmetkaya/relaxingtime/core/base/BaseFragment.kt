@@ -66,7 +66,7 @@ abstract class BaseFragment : Fragment() {
     protected fun onError(exception: Exception, buttonClicked: () -> Unit = {}) {
         MaterialAlertDialogBuilder(requireContext())
             .setMessage(exception.message)
-            .setPositiveButton(getString(R.string.ok)) { _, _ -> buttonClicked() }
+            .setPositiveButton(getString(R.string.common_ok)) { _, _ -> buttonClicked() }
             .show()
     }
 }

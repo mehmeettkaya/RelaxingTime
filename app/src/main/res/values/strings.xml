@@ -1,4 +1,20 @@
 <resources>
-    <string name="app_name">RelaxingTime</string>
-    <string name="ok">ok</string>
+    <string name="app_name">Relaxing Time</string>
+
+    <!-- common -->
+    <string name="common_ok">Tamam</string>
+    <string name="common_cancel">İptal</string>
+    <string name="common_send">Gönder</string>
+    <string name="common_yes">Evet</string>
+    <string name="common_no">Hayır</string>
+    <string name="common_warning">Uyarı</string>
+    <string name="common_unhandled_service_error">Bir hata oluştu, lütfen tekrar deneyiniz.</string>
+    <string name="common_delete">Sil</string>
+    <string name="common_ignore">Vazgeç</string>
+
+    <!-- login -->
+    <string name="sign_in_title">Sign in to Relaxing Time</string>
+    <string name="username_hint">Username</string>
+    <string name="password_hint">Password</string>
+    <string name="continue_button_text">CONTINUE</string>
 </resources>

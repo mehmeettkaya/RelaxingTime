@@ -1,0 +1,23 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="Theme.RelaxingTime" parent="Theme.MaterialComponents.Light.NoActionBar.Bridge">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">?attr/colorPrimaryDark</item>
+    </style>
+
+    <style name="TextAppearance.Regular" parent="TextAppearance.AppCompat.Body1">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="TextAppearance.Bold" parent="TextAppearance.Regular">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextAppearance.Medium" parent="TextAppearance.AppCompat.Body2">
+        <item name="android:textColor">@color/white</item>
+    </style>
+</resources>
