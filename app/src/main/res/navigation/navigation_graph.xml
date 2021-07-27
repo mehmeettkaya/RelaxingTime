@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.mehmetkaya.relaxingtime.ui.main.home.HomeFragment"
+        android:label="home_fragment"
+        tools:layout="@layout/fragment_home">
+
+        <action
+            android:id="@+id/action_homeFragment_to_mediaFragment"
+            app:destination="@id/mediaFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/mediaFragment"
+        android:name="com.mehmetkaya.relaxingtime.ui.main.media.MediaFragment"
+        android:label="media_fragment"
+        tools:layout="@layout/fragment_media" />
+
+</navigation>

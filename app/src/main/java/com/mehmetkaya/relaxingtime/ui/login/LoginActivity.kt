@@ -7,7 +7,8 @@ import com.mehmetkaya.core.withEvent
 import com.mehmetkaya.core.withUiState
 import com.mehmetkaya.relaxingtime.databinding.ActivityLoginBinding
 import com.mehmetkaya.relaxingtime.ui.login.LoginViewModel.LoginEvent.NavigateToHome
-import com.mehmetkaya.utils.exts.textChanges
+import com.mehmetkaya.relaxingtime.ui.main.MainActivity
+import com.mehmetkaya.utils.exts.*
 import com.mehmetkaya.utils.viewbinding.viewBinding
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -45,7 +46,13 @@ class LoginActivity : AppCompatActivity() {
 
     private fun observeEvent() = withEvent(viewModel) { event ->
         when (event) {
-            NavigateToHome -> Unit
+            NavigateToHome -> {
+                hideKeyboard()
+                startActivity<MainActivity> {
+                    withNoAnimation()
+                    withNoHistory()
+                }
+            }
         }
     }
 }

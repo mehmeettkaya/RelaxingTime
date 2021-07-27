@@ -1,4 +1,4 @@
-package com.mehmetkaya.relaxingtime.data.remote
+package com.mehmetkaya.relaxingtime.data.remote.home
 
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable

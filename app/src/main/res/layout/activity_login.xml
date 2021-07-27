@@ -43,7 +43,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/spacing_big"
         android:hint="@string/password_hint"
-        app:layout_constraintTop_toBottomOf="@id/userNameInputLayout">
+        app:layout_constraintTop_toBottomOf="@id/userNameInputLayout"
+        app:passwordToggleEnabled="true">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/passwordEditText"

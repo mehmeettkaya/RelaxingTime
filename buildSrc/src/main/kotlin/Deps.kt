@@ -8,6 +8,7 @@ object Deps {
     const val lifecycleRuntime = "androidx.lifecycle:lifecycle-runtime-ktx:${Versions.lifecycle}"
     const val viewModelKtx = "androidx.lifecycle:lifecycle-viewmodel-ktx:${Versions.lifecycle}"
     const val coreKtx = "androidx.core:core-ktx:${Versions.coreKtx}"
+    const val recyclerView = "androidx.recyclerview:recyclerview:${Versions.recyclerView}"
     const val constraintLayout = "androidx.constraintlayout:constraintlayout:${Versions.constraintLayout}"
     const val hilt = "com.google.dagger:hilt-android:${Versions.hilt}"
     const val hiltCompiler = "com.google.dagger:hilt-android-compiler:${Versions.hilt}"
@@ -20,7 +21,6 @@ object Deps {
     const val okhttp = "com.squareup.okhttp3:okhttp"
     const val okhttpLogging = "com.squareup.okhttp3:logging-interceptor"
     const val glide = "com.github.bumptech.glide:glide:${Versions.glide}"
-    const val glideOkhttpIntegration = "com.github.bumptech.glide:okhttp3-integration:${Versions.glide}"
     const val glideAnnotationProcessor = "com.github.bumptech.glide:compiler:${Versions.glide}"
     const val coroutinesCore = "org.jetbrains.kotlinx:kotlinx-coroutines-core:${Versions.coroutines}"
     const val coroutinesAndroid = "org.jetbrains.kotlinx:kotlinx-coroutines-android:${Versions.coroutines}"
@@ -28,4 +28,6 @@ object Deps {
     const val epoxyProcessor = "com.airbnb.android:epoxy-processor:${Versions.epoxy}"
     const val timber = "com.jakewharton.timber:timber:${Versions.timber}"
     const val gravitySnapHelper = "com.github.rubensousa:gravitysnaphelper:${Versions.gravitySnapHelper}"
+    const val navigationFragmentKtx = "androidx.navigation:navigation-fragment-ktx:${Versions.navigation}"
+    const val navigationUiKtx = "androidx.navigation:navigation-ui-ktx:${Versions.navigation}"
 }

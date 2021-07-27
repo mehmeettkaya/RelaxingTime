@@ -1,4 +1,5 @@
 object Versions {
+    // Kotlin
     const val kotlin = "1.5.21"
     const val kotlinSerialization = "1.1.0"
 
@@ -9,6 +10,8 @@ object Versions {
     const val lifecycle = "2.4.0-alpha01"
     const val coreKtx = "1.5.0"
     const val constraintLayout = "2.0.4"
+    const val recyclerView = "1.2.0"
+    const val navigation = "2.3.5"
 
     // Google
     const val hilt = "2.36"

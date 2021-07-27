@@ -19,6 +19,9 @@ dependencies {
     implementation(Deps.appcompat)
     implementation(Deps.epoxy)
 
+    // RecyclerView
+    implementation(Deps.recyclerView)
+
     // Hilt
     kapt(Deps.hiltCompiler)
     implementation(Deps.hilt)
@@ -36,6 +39,10 @@ dependencies {
 
     // Epoxy
     implementation(Deps.epoxy)
+
+    // Glide
+    implementation(Deps.glide)
+    kapt(Deps.glideAnnotationProcessor)
 
     // Kotlin Serialization
     implementation(Deps.kotlinSerialization)

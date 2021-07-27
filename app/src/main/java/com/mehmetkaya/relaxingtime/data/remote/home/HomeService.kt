@@ -1,4 +1,4 @@
-package com.mehmetkaya.relaxingtime.data.remote
+package com.mehmetkaya.relaxingtime.data.remote.home
 
 import retrofit2.http.GET
 import retrofit2.http.Path

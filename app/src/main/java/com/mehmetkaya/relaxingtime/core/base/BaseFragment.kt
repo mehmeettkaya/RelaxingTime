@@ -10,8 +10,6 @@ import androidx.fragment.app.Fragment
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.mehmetkaya.relaxingtime.R
 import com.mehmetkaya.relaxingtime.databinding.FragmentBaseBinding
-import com.mehmetkaya.utils.exts.hide
-import com.mehmetkaya.utils.exts.show
 import com.mehmetkaya.utils.viewbinding.viewBinding
 
 abstract class BaseFragment : Fragment() {
@@ -54,19 +52,19 @@ abstract class BaseFragment : Fragment() {
     }
 
     private fun showProgress() = with(binding) {
-        if (progressLayout.isVisible) return
+        if (circularProgressIndicator.isVisible) return
 
-        progressLayout.show()
+        circularProgressIndicator.show()
     }
 
     private fun hideProgress() {
-        binding.progressLayout.hide()
+        binding.circularProgressIndicator.hide()
     }
 
     protected fun onError(exception: Exception, buttonClicked: () -> Unit = {}) {
         MaterialAlertDialogBuilder(requireContext())
             .setMessage(exception.message)
-            .setPositiveButton(getString(R.string.common_ok)) { _, _ -> buttonClicked() }
+            .setPositiveButton(getString(R.string.ok)) { _, _ -> buttonClicked() }
             .show()
     }
 }

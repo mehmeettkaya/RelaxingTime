@@ -34,6 +34,7 @@ android {
 dependencies {
     implementation(project(":core"))
     implementation(project(":utils"))
+    implementation(project(":widgets"))
 
     // Kotlin
     implementation(Deps.kotlin)
@@ -43,6 +44,8 @@ dependencies {
     implementation(Deps.activityKtx)
     implementation(Deps.fragmentKtx)
     implementation(Deps.viewModelKtx)
+    implementation(Deps.navigationFragmentKtx)
+    implementation(Deps.navigationUiKtx)
 
     // Lifecycle
     implementation(Deps.lifecycleCommon)
@@ -71,6 +74,10 @@ dependencies {
     implementation(Deps.gravitySnapHelper)
     implementation(Deps.epoxy)
     kapt(Deps.epoxyProcessor)
+
+    // Glide
+    implementation(Deps.glide)
+    kapt(Deps.glideAnnotationProcessor)
 
     // Misc
     implementation(Deps.timber)
