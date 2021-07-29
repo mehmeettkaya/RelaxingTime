@@ -4,25 +4,33 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingHorizontal="@dimen/spacing_large"
-    android:paddingVertical="@dimen/spacing_huge"
     tools:context=".ui.login.LoginActivity">
+
+    <View
+        android:id="@+id/statusBarView"
+        android:layout_width="match_parent"
+        android:layout_height="24sp"
+        android:background="@drawable/ic_status_bar_background"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/titleTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/spacing_large"
+        android:layout_marginTop="@dimen/spacing_huge"
         android:text="@string/sign_in_title"
         android:textAppearance="@style/TextAppearance.Bold"
         android:textColor="@color/pig_iron"
         android:textSize="@dimen/text_xxlarge"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/statusBarView" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/userNameInputLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/spacing_large"
         android:layout_marginTop="@dimen/spacing_big"
         android:hint="@string/username_hint"
         app:layout_constraintTop_toBottomOf="@id/titleTextView">
@@ -41,6 +49,7 @@
         android:id="@+id/passwordInputLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/spacing_large"
         android:layout_marginTop="@dimen/spacing_big"
         android:hint="@string/password_hint"
         app:layout_constraintTop_toBottomOf="@id/userNameInputLayout"
@@ -60,7 +69,8 @@
         android:id="@+id/continueButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/spacing_big"
+        android:layout_marginHorizontal="@dimen/spacing_large"
+        android:layout_marginVertical="@dimen/spacing_big"
         android:backgroundTint="@color/color_state_material_button"
         android:elevation="3dp"
         android:enabled="false"

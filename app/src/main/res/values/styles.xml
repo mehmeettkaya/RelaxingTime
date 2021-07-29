@@ -9,8 +9,13 @@
         <item name="android:statusBarColor">?attr/colorPrimaryDark</item>
     </style>
 
+    <style name="Theme.RelaxingTime.Login" parent="Theme.RelaxingTime">
+        <item name="android:windowTranslucentStatus">true</item>
+    </style>
+
+
     <style name="Theme.RelaxingTime.Main" parent="Theme.RelaxingTime">
-        <item name="android:windowBackground">@drawable/ic_background</item>
+        <item name="android:windowBackground">@drawable/ic_main_background</item>
     </style>
 
     <style name="TextAppearance.Regular" parent="TextAppearance.AppCompat.Body1">

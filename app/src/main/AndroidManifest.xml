@@ -19,7 +19,7 @@
         <activity
             android:name=".ui.login.LoginActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/Theme.RelaxingTime"
+            android:theme="@style/Theme.RelaxingTime.Login"
             android:windowSoftInputMode="adjustNothing"
             tools:ignore="LockedOrientationActivity">
             <intent-filter>
