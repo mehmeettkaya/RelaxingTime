@@ -83,6 +83,9 @@ dependencies {
     // Misc
     implementation(Deps.timber)
 
+    // ExoPlayer
+    implementation(Deps.exoPlayer)
+
     // Test
     testImplementation(TestDeps.testCore)
     testImplementation(TestDeps.junit)

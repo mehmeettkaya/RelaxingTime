@@ -28,6 +28,9 @@ object Versions {
     // Image Loading
     const val glide = "4.12.0"
 
+    // ExoPlayer
+    const val exoPlayer = "2.14.2"
+
     // Others
     const val epoxy = "4.6.1"
     const val timber = "4.7.1"
