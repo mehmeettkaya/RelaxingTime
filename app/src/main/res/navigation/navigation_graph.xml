@@ -11,15 +11,21 @@
         tools:layout="@layout/fragment_home">
 
         <action
-            android:id="@+id/action_homeFragment_to_mediaFragment"
-            app:destination="@id/mediaFragment" />
+            android:id="@+id/action_home_to_media_detail"
+            app:destination="@id/mediaDetailFragment" />
 
     </fragment>
 
     <fragment
-        android:id="@+id/mediaFragment"
-        android:name="com.mehmetkaya.relaxingtime.ui.main.media.MediaFragment"
+        android:id="@+id/mediaDetailFragment"
+        android:name="com.mehmetkaya.relaxingtime.ui.main.media.MediaDetailFragment"
         android:label="media_fragment"
-        tools:layout="@layout/fragment_media" />
+        tools:layout="@layout/fragment_media_detail">
+
+        <argument
+            android:name="mediaDetail"
+            app:argType="com.mehmetkaya.relaxingtime.domain.media.MediaDetail" />
+
+    </fragment>
 
 </navigation>

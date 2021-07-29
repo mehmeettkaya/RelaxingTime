@@ -23,9 +23,7 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
         initView()
-
-        observeState()
-        observeEvent()
+        observeViewModel()
     }
 
     private fun initView() = with(binding) {
@@ -40,19 +38,24 @@ class LoginActivity : AppCompatActivity() {
         }
     }
 
-    private fun observeState() = withUiState(viewModel) { state ->
-        binding.continueButton.isEnabled = state.isValid
+    private fun observeViewModel() = with(viewModel) {
+        withUiState(this) { state ->
+            binding.continueButton.isEnabled = state.isValid
+        }
+
+        withEvent(this) { event ->
+            when (event) {
+                NavigateToHome -> navigateToHome()
+            }
+        }
     }
 
-    private fun observeEvent() = withEvent(viewModel) { event ->
-        when (event) {
-            NavigateToHome -> {
-                hideKeyboard()
-                startActivity<MainActivity> {
-                    withNoAnimation()
-                    withNoHistory()
-                }
-            }
+    private fun navigateToHome() {
+        hideKeyboard()
+
+        startActivity<MainActivity> {
+            withNoAnimation()
+            withNoHistory()
         }
     }
 }

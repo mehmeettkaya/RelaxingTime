@@ -3,6 +3,7 @@ package com.mehmetkaya.relaxingtime.ui.main.home
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import com.airbnb.epoxy.EpoxyItemSpacingDecorator
 import com.mehmetkaya.core.withError
@@ -12,7 +13,10 @@ import com.mehmetkaya.core.withUiState
 import com.mehmetkaya.relaxingtime.R
 import com.mehmetkaya.relaxingtime.core.base.BaseFragment
 import com.mehmetkaya.relaxingtime.core.base.contentViewBinding
+import com.mehmetkaya.relaxingtime.data.remote.home.Meditation
+import com.mehmetkaya.relaxingtime.data.remote.home.Story
 import com.mehmetkaya.relaxingtime.databinding.FragmentHomeBinding
+import com.mehmetkaya.relaxingtime.domain.media.MediaDetail
 import com.mehmetkaya.relaxingtime.ui.main.home.HomeViewModel.HomeEvent.NavigateToMediaDetail
 import com.mehmetkaya.relaxingtime.ui.main.home.epoxy.HomeEpoxyController
 import com.mehmetkaya.relaxingtime.ui.main.home.epoxy.HomeEpoxyController.Companion.SPAN_SIZE_FULL_WIDTH
@@ -34,14 +38,16 @@ class HomeFragment : BaseFragment() {
         super.onViewCreated(view, savedInstanceState)
         initEpoxyController()
         observeViewModel()
-
-        viewModel.fetchHome()
     }
 
     private fun initEpoxyController() {
         epoxyController = HomeEpoxyController(object : HomeCallbacks {
-            override fun onItemClicked(id: String) {
-                TODO("Not yet implemented")
+            override fun onMeditationClicked(meditation: Meditation) {
+                viewModel.onMeditationClicked(meditation)
+            }
+
+            override fun onStoryClicked(story: Story) {
+                viewModel.onStoryClicked(story)
             }
         }).apply { spanCount = SPAN_SIZE_FULL_WIDTH }
 
@@ -65,8 +71,13 @@ class HomeFragment : BaseFragment() {
         withError(this, ::onError)
         withEvent(this) { event ->
             when (event) {
-                NavigateToMediaDetail -> Unit
+                is NavigateToMediaDetail -> navigateToMediaDetail(event.mediaDetail)
             }
         }
+    }
+
+    private fun navigateToMediaDetail(mediaDetail: MediaDetail) {
+        val action = HomeFragmentDirections.actionHomeToMediaDetail(mediaDetail)
+        findNavController().navigate(action)
     }
 }

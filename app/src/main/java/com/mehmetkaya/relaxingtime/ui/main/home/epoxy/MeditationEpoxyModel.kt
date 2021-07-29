@@ -1,6 +1,7 @@
 package com.mehmetkaya.relaxingtime.ui.main.home.epoxy
 
 import com.airbnb.epoxy.EpoxyAttribute
+import com.airbnb.epoxy.EpoxyAttribute.Option.DoNotHash
 import com.airbnb.epoxy.EpoxyModelClass
 import com.bumptech.glide.load.resource.bitmap.CenterCrop
 import com.bumptech.glide.load.resource.bitmap.RoundedCorners
@@ -17,12 +18,16 @@ abstract class MeditationEpoxyModel : ViewBindingEpoxyModel<ItemMeditationBindin
     @EpoxyAttribute
     lateinit var item: MeditationEpoxyItem
 
+    @EpoxyAttribute(DoNotHash)
+    lateinit var onItemClicked: (meditation: Meditation) -> Unit
+
     override fun getDefaultLayout() = R.layout.item_meditation
 
     override fun ItemMeditationBinding.bind() = with(item.meditation) {
         posterImageView.load(image.small) { transform(CenterCrop(), RoundedCorners(24)) }
         titleTextView.text = title
         subTitleTextView.text = subtitle
+        root.setOnClickListener { onItemClicked(this) }
     }
 }
 

@@ -2,6 +2,8 @@ package com.mehmetkaya.relaxingtime.ui.main.home.epoxy
 
 import com.airbnb.epoxy.TypedEpoxyController
 import com.mehmetkaya.relaxingtime.R
+import com.mehmetkaya.relaxingtime.data.remote.home.Meditation
+import com.mehmetkaya.relaxingtime.data.remote.home.Story
 import com.mehmetkaya.relaxingtime.ui.main.home.HomeViewModel.HomeState
 import com.mehmetkaya.utils.exts.carouselPadding
 import com.mehmetkaya.utils.exts.scrollToTop
@@ -12,7 +14,8 @@ class HomeEpoxyController(
 ) : TypedEpoxyController<HomeState>() {
 
     interface HomeCallbacks {
-        fun onItemClicked(id: String)
+        fun onMeditationClicked(meditation: Meditation)
+        fun onStoryClicked(story: Story)
     }
 
     override fun buildModels(data: HomeState) = with(data) {
@@ -65,6 +68,7 @@ class HomeEpoxyController(
         return MeditationEpoxyModel_()
             .id(item.meditation.title)
             .item(item)
+            .onItemClicked(homeCallbacks::onMeditationClicked)
     }
 
     private fun buildHeaderModel(item: HeaderEpoxyItem) {
@@ -79,6 +83,7 @@ class HomeEpoxyController(
         story {
             id(item.story.name)
             item(item)
+            onItemClicked(homeCallbacks::onStoryClicked)
             spanSizeOverride { _, _, _ -> SPAN_SIZE_STORY }
         }
     }

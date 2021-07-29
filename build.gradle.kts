@@ -21,6 +21,7 @@ buildscript {
         classpath(kotlin("android-extensions", version = Versions.kotlin))
         classpath(kotlin("serialization", version = Versions.kotlin))
         classpath(Deps.hiltGradlePlugin)
+        classpath(Deps.navigationSafeArgs)
     }
 }
 

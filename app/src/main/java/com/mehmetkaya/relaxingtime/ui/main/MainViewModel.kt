@@ -8,7 +8,9 @@ import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 
 @HiltViewModel
-class MainViewModel @Inject constructor() : StatefulViewModel<MainState, NoEvent>(MainState) {
+class MainViewModel @Inject constructor(
+
+) : StatefulViewModel<MainState, NoEvent>(MainState) {
 
     object MainState : UiState
 }

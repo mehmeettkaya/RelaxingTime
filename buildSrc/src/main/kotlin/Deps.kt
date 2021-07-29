@@ -30,4 +30,5 @@ object Deps {
     const val gravitySnapHelper = "com.github.rubensousa:gravitysnaphelper:${Versions.gravitySnapHelper}"
     const val navigationFragmentKtx = "androidx.navigation:navigation-fragment-ktx:${Versions.navigation}"
     const val navigationUiKtx = "androidx.navigation:navigation-ui-ktx:${Versions.navigation}"
+    const val navigationSafeArgs = "androidx.navigation:navigation-safe-args-gradle-plugin:${Versions.navigation}"
 }

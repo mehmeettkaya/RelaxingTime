@@ -13,4 +13,7 @@
     <string name="meditations_title">Meditations</string>
     <string name="stories_title">Stories</string>
     <string name="banner_text">Look! %s. Pretty, isn’t it? Perfectly balanced. As all things should be.</string>
+
+    <!-- media detail -->
+    <string name="media_detail_title">Meditation Detail</string>
 </resources>

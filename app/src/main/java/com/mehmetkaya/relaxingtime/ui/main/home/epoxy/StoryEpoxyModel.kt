@@ -1,6 +1,7 @@
 package com.mehmetkaya.relaxingtime.ui.main.home.epoxy
 
 import com.airbnb.epoxy.EpoxyAttribute
+import com.airbnb.epoxy.EpoxyAttribute.Option.DoNotHash
 import com.airbnb.epoxy.EpoxyModelClass
 import com.bumptech.glide.load.resource.bitmap.CenterCrop
 import com.bumptech.glide.load.resource.bitmap.RoundedCorners
@@ -17,12 +18,16 @@ abstract class StoryEpoxyModel : ViewBindingEpoxyModel<ItemStoryBinding>() {
     @EpoxyAttribute
     lateinit var item: StoryEpoxyItem
 
+    @EpoxyAttribute(DoNotHash)
+    lateinit var onItemClicked: (story: Story) -> Unit
+
     override fun getDefaultLayout() = R.layout.item_story
 
     override fun ItemStoryBinding.bind() = with(item.story) {
         posterImageView.load(image.small) { transform(CenterCrop(), RoundedCorners(24)) }
         nameTextView.text = name
         categoryTextView.text = category
+        root.setOnClickListener { onItemClicked(this) }
     }
 }
 
