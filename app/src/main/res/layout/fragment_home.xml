@@ -5,4 +5,5 @@
     android:layout_height="match_parent"
     android:clipChildren="false"
     android:clipToPadding="false"
-    android:paddingHorizontal="@dimen/spacing_large" />
+    android:paddingHorizontal="@dimen/spacing_large"
+    android:paddingBottom="@dimen/spacing_large" />

@@ -39,8 +39,6 @@ object Versions {
     // Test
     const val androidxTest = "1.3.0"
     const val junit = "4.13.2"
-    const val mockito = "3.6.28"
     const val mockitoKotlin = "2.2.0"
-    const val archCoreTesting = "2.1.0"
     const val assertj = "3.19.0"
 }
